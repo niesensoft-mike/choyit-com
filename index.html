@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choyit Solutions - Home</title>
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        /* CSS Reset and Logo-Matched Variables */
+        :root {
+            /* Primary brand text color: Darkened orange for high readability */
+            --primary-color: #c15a18; 
+            /* Warm dark brown for general text and footer */
+            --secondary-color: #3b2b20; 
+            /* Very soft, warm cream background */
+            --background-light: #fbf9f6; 
+            /* Standard text color */
+            --text-color: #4a4a4a; 
+            
+            /* Logo-specific line of business colors */
+            --lob-yellow: #f3a70d;
+            --lob-blue: #076fb5;
+            --lob-red: #cf4129;
+            --lob-green: #45bb43;
+        }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        body { 
+            color: var(--text-color); 
+            line-height: 1.6; 
+            background-color: var(--background-light);
+        }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Navigation Bar */
+        header { 
+            background: #ffffff; 
+            padding: 1rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        
+        /* Option 2 Logo Styles: Image + Text */
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            font-size: 1.6rem; 
+            font-weight: bold; 
+            color: var(--primary-color); 
+            letter-spacing: 0.5px;
+        }
+        .logo img {
+            height: 45px; /* Adjust height based on your preference */
+            width: auto;
+            display: block;
+        }
+
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { font-weight: 500; transition: color 0.3s; color: var(--secondary-color); }
+        .nav-links a:hover { color: var(--primary-color); }
+        
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(59, 43, 32, 0.75), rgba(59, 43, 32, 0.75)), 
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80'); 
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            text-align: center; 
+            padding: 140px 20px; 
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 1.25rem; max-width: 650px; margin: 0 auto 35px; color: #f0f0f0; }
+        .btn { 
+            display: inline-block; 
+            padding: 14px 35px; 
+            background: var(--primary-color); 
+            color: white; 
+            border-radius: 6px; 
+            font-weight: 600; 
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s; 
+        }
+        .btn:hover { background: #9c4813; transform: translateY(-2px); } 
+        
+        /* Lines of Business / Services */
+        .services { padding: 90px 5%; text-align: center; }
+        .services h2 { color: var(--secondary-color); margin-bottom: 50px; font-size: 2.8rem; }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 30px; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Individual Card Styling */
+        .card { 
+            background: white; 
+            padding: 45px 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04); 
+            transition: transform 0.3s, box-shadow 0.3s; 
+            text-align: left;
+        }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        .card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+        .card p { font-size: 1rem; color: #666; }
+
+        /* Specific Brand Colors for each Line of Business */
+        .card.yellow { border-top: 5px solid var(--lob-yellow); }
+        .card.yellow h3 { color: var(--lob-yellow); }
+
+        .card.blue { border-top: 5px solid var(--lob-blue); }
+        .card.blue h3 { color: var(--lob-blue); }
+
+        .card.red { border-top: 5px solid var(--lob-red); }
+        .card.red h3 { color: var(--lob-red); }
+
+        .card.green { border-top: 5px solid var(--lob-green); }
+        .card.green h3 { color: var(--lob-green); }
+        
+        /* Footer */
+        footer { 
+            background: var(--secondary-color); 
+            color: white; 
+            text-align: center; 
+            padding: 50px 20px; 
+            margin-top: 40px;
+        }
+        footer p { margin-bottom: 10px; opacity: 0.9; }
+        footer a { color: #fbf9f6; text-decoration: underline; }
+        footer a:hover { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Choyit Logo">
+            Choyit Solutions
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="terms.html">Terms</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Business without Barriers</h1>
+        <p>Four distinct lines of business, united to bring comprehensive, full-spectrum solutions to your daily operations.</p>
+        <a href="contact.html" class="btn">Discover Our Work</a>
+    </section>
+
+    <!-- Lines of Business Section -->
+    <section class="services">
+        <h2>Our Core Pillars</h2>
+        <div class="grid">
+            
+            <!-- Yellow/Orange Line of Business -->
+            <div class="card yellow">
+                <h3>ERP Systems Consulting</h3>
+                <p><strong>Choyit Consulting</strong> helps businesses optimize operations with expert ERP solutions, specializing in Epicor Kinetic. From business process consulting in sales, operations, and finance to technical services like custom reporting, ERP customization, Power BI, and system integration, we ensure your ERP systems works for you. Unlock efficiency, streamline workflows, and drive growth with our tailored expertise.</p>
+            </div>
+            
+            <!-- Blue Line of Business -->
+            <div class="card blue">
+                <h3>App Solutions</h3>
+                <p><strong>Niesensoft</strong> specializes in custom IT solutions, from web development to tailored business applications. We create intuitive, efficient, and scalable software that empowers businesses to streamline operations and enhance digital experiences. Whether you need a website, an app, or a custom integration, we turn your ideas into reality.</p>
+            </div>
+            
+            <!-- Red Line of Business -->
+            <div class="card red">
+                <h3>Physical Retail & Collectibles</h3>
+                <p>Through our dedicated <strong>Yamaware</strong> storefront, we securely source and distribute highly sought-after consumer electronics and premium, factory-sealed Trading Card Game (TCG) products for collectors worldwide.</p>
+            </div>
+            
+            <!-- Green Line of Business -->
+            <div class="card green">
+                <h3>Backup Solutions</h3>
+                <p><strong>Yamaware Backup Services</strong> delivers reliable backup and storage solutions tailored for tech-savvy home users and small businesses. From high-performance NAS devices to enterprise-grade hard drives, we provide the tools you need to safeguard your data with confidence. Simplify your storage, secure your business, and back up without worries.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Choyit Solutions. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@choyit.com">info@choyit.com</a></p>
+    </footer>
+
+</body>
+</html>

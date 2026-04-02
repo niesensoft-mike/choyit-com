@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choyit Solutions - About Us</title>
+        <!-- Favicon Links -->
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        /* Shared Variables and Reset */
+        :root {
+            --primary-color: #c15a18; 
+            --secondary-color: #3b2b20; 
+            --background-light: #fbf9f6; 
+            --text-color: #4a4a4a; 
+        }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        body { 
+            color: var(--text-color); 
+            line-height: 1.6; 
+            background-color: var(--background-light);
+        }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Navigation Bar */
+        header { 
+            background: #ffffff; 
+            padding: 1rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            font-size: 1.6rem; 
+            font-weight: bold; 
+            color: var(--primary-color); 
+            letter-spacing: 0.5px;
+        }
+        .logo img { height: 45px; width: auto; display: block; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { font-weight: 500; transition: color 0.3s; color: var(--secondary-color); }
+        .nav-links a:hover { color: var(--primary-color); }
+        
+        /* Page Header */
+        .page-header {
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .page-header p { font-size: 1.1rem; opacity: 0.9; }
+
+        /* Content Sections */
+        .about-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .about-card {
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            margin-bottom: 40px;
+        }
+        .about-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        .about-card p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        /* Two Column Layout inside Card */
+        .split-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .split-content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Call to Action Button */
+        .btn { 
+            display: inline-block; 
+            padding: 12px 30px; 
+            background: var(--primary-color); 
+            color: white; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            transition: background 0.3s, transform 0.2s;
+            text-align: center;
+        }
+        .btn:hover { background: #9c4813; transform: translateY(-2px); }
+
+        /* Highlight Box for eBay */
+        .ebay-box {
+            background: #fdfaf6;
+            border: 2px dashed #dcdcdc;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .ebay-box h3 { color: var(--secondary-color); margin-bottom: 10px; }
+        .ebay-box p { margin-bottom: 20px; font-size: 1rem; }
+
+        @media (max-width: 768px) {
+            .split-content { grid-template-columns: 1fr; }
+        }
+
+        /* Footer */
+        footer { 
+            background: var(--secondary-color); 
+            color: white; 
+            text-align: center; 
+            padding: 50px 20px; 
+            margin-top: 40px;
+        }
+        footer p { margin-bottom: 10px; opacity: 0.9; }
+        footer a { color: #fbf9f6; text-decoration: underline; }
+        footer a:hover { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Choyit Logo">
+            Choyit Solutions
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="terms.html">Terms</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>About Choyit Solutions</h1>
+        <p>Bridging the gap between robust technology and physical retail.</p>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-container">
+        
+              <!-- Main Story -->
+              <div class="about-card">
+                <h2>Our Story</h2>
+                <p>Founded in 2019, Choyit Solutions is a Washington-based small business built on a foundation of deep technical expertise and market adaptability. What began as a dedicated IT consulting firm focused on storage, hardware, and ERP solutions has steadily evolved into a multi-disciplinary company. Today, our diverse portfolio spans both the digital and physical worlds, driven by the four core pillars represented in our logo.</p>
+                
+                <div class="split-content">
+                    <div>
+                        <h3>Digital Innovation</h3>
+                        <p>In the digital space, we leverage years of analytical experience to remove technical barriers for companies of all sizes. Whether we are building custom iOS applications, optimizing enterprise ERP systems, or securing your data, our mission is to simplify IT complexities. <strong>Choyit Consulting & Niesensoft</strong> provide practical, reliable, and scalable software solutions so our clients can focus entirely on what they do best.</p>
+                    </div>
+                    <div>
+                        <h3>Physical Retail & Collectibles</h3>
+                        <p>Simultaneously, our physical operations operate with the same commitment to reliability. Through our dedicated <strong>Yamaware</strong> storefront, we maintain a thriving retail division that securely sources and distributes highly sought-after consumer electronics and premium, factory-sealed Trading Card Game (TCG) products to collectors and consumers worldwide.</p>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Choyit Solutions. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@choyit.com">info@choyit.com</a></p>
+    </footer>
+
+</body>
+</html>
